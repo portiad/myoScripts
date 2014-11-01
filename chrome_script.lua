@@ -1,4 +1,4 @@
-scriptId = 'co.portia.examples.cookinghelper'
+scriptId = 'co.portia.examples.chrome_script'
 
 UNLOCKED_TIMEOUT = 10000
 
@@ -29,8 +29,9 @@ function  onActiveChange(isActive)
 	end
 end
 
+
 -- Effects
---TODO!!!
+
 function onWaveIn()
 	myo.debug("Tab Back")
 	myo.keyboard("left_arrow", "press", "alt", "command")
@@ -45,9 +46,9 @@ function onFingersSpread()
 	myo.debug("New Tab")
 	myo.keyboard("t", "press", "command")
 end
--- TODO!!
 
---Helpers
+
+-- Helpers
 
 -- Detrmine which arm the myo is on and swap if on left
 function conditionallySwapWave(pose)
@@ -125,6 +126,9 @@ function onPoseEdge(pose, edge)
 		end
 	end
 end
+
+
+-- Called every 10ms
 
 function onPeriodic()
 	
