@@ -40,10 +40,6 @@ function onWaveOut()
 	myo.keyboard("right_arrow", "press", "alt", "command")
 end
 
-function onFingersSpread()
-	myo.keyboard("t", "press", "command")
-end
-
 
 -- Helpers
 
@@ -103,8 +99,6 @@ function onPoseEdge(pose, edge)
 				onWaveOut()
 			elseif pose == "waveIn" then
 				onWaveIn()
-			elseif pose == "fingersSpread" then
-				onFingersSpread()
 			end
 		end
 	end
